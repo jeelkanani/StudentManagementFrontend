@@ -25,24 +25,23 @@ export default function Student() {
     const value = event.target.value
 
     setState({
-      // 
       ...state,[name]:value,
     })
-    // console.log(state);
-    // if(event.target.name==="id"){
-    //   setId(event.target.value);
-    // } else if(event.target.name==="name"){
-    //   setName(event.target.value);
-    // } else if(event.target.name==="address"){
-    //   setAddress(event.target.value);
-    // }
-    // console.log(state);
+    
   }
 
   let saveStudent = () => {
-   
+        axios.post("http://localhost:8080/student", student)
+        .then(response => {
+          if(response.data != null){
+            alert('Record added successfully');        
+          }
+        })
+        .catch(error => alert(error));
+        window.location.reload(false);
+        
+      }
     
-  }
 
   return (
     <div  className="my-3">

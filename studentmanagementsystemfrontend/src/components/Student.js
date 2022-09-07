@@ -44,7 +44,7 @@ export default function Student() {
     
 
   return (
-    <div  className="my-3">
+    <div  className="my-5">
     <Container>
       <Card>
         <Form onSubmit={saveStudent}>
@@ -64,7 +64,7 @@ export default function Student() {
             </Form.Group>
           </Card.Body>
           <Card.Footer>
-          <Button variant="primary" type="submit">
+          <Button variant="dark" type="submit">
             Submit
           </Button>
           </Card.Footer>

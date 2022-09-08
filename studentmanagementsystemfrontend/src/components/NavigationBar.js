@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 export default function NavigationBar() {
   return (
@@ -17,10 +18,10 @@ export default function NavigationBar() {
     <ul className="navbar-nav mr-auto">
      
       <li className="nav-item active">
-        <a className="nav-link " href="#">Add Student</a>
+        <Link className="nav-link " to="/student">Add Student</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">View Students</a>
+        <Link className="nav-link" to="/liststudents">View Students</Link>
       </li>
      
     </ul>

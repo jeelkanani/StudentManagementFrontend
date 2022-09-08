@@ -8,7 +8,7 @@ const [student, setStudent] = useState([]);
 
 
   return (
-    <div className="my-5">
+    <div className="my-3">
       <Container>
         <Card.Header><h3>Students List</h3></Card.Header>
         <Card.Body>
@@ -22,7 +22,7 @@ const [student, setStudent] = useState([]);
               </tr>
             </thead>
             <tbody>
-              <tr>
+            {/* <tr>
                 <td>1</td>
                 <td>Mark</td>
                 <td>Otto</td>
@@ -51,8 +51,19 @@ const [student, setStudent] = useState([]);
                   &nbsp;&nbsp;
                   <button type="butoon" className="btn btn-danger">Delete</button>
                 </td>
+              </tr> */}
+              {student.map(student=> (
+              <tr class="text-center">
+                <td>{student.id}</td>
+                <td>{student.name}</td>
+                <td>{student.address}</td>
+                <td>
+                  <button type="butoon" className="btn btn-primary" >Edit</button>
+                  &nbsp;&nbsp;
+                  <button type="butoon" className="btn btn-danger">Delete</button>
+                </td>
               </tr>
-              
+              ))}
          
             </tbody>
           </Table>

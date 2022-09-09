@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/student" />} />
         <Route path='student' element={<Student/>}/>
+        <Route path="student/:studentId" element={<Student />}/>
         <Route path='liststudents' element={<StudentList/>}/>
       </Routes>
       <Footer/>
